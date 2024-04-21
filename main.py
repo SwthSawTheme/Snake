@@ -48,7 +48,7 @@ def selecionar_velocidade(tecla):
     return vel_x, vel_y
 
 def game():
-    fps = 10
+    fps = 12
     fim_jogo = False
     
     x = largura / 2
@@ -108,11 +108,8 @@ def game():
         #Acrescentar 1 comida após comer outra
         if x == comida_x and y == comida_y:
             tamanho_cobra += 1
-            fps += 1
             comida_x, comida_y = gerar_comida()
         
         relogio.tick(fps)
         
-
-
 game()
